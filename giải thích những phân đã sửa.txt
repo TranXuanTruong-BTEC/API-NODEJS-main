@@ -1,0 +1,9 @@
+1. Sửa Đổi Schema Người Dùng
+Schema Người Dùng: Sửa trường user_id không phải là bắt buộc trong schema của người dùng trong models/User.js, cho phép linh hoạt hơn trong việc tạo người dùng.
+2. Sửa lại Xử Lý Token
+Xử Lý Token: Đã thêm middleware để xác thực token JWT trong middleware/auth.js, để cho các route yêu cầu xác thực đều được bảo vệ.
+3. Cập Nhật Cách Kết Nối MongoDB
+Cập Nhật Kết Nối MongoDB: Đã loại bỏ các tùy chọn useNewUrlParser và useUnifiedTopology trong db.js vì cũ lắm rồi
+* Các file đã sửa:
+- controllers/authController.js: Cải thiện kiểm tra đầu vào trong các hàm signup và signin để đảm bảo rằng tất cả các trường cần thiết đều được cung cấp.
+- models/User.js: Đảm bảo rằng trường user_id không phải là bắt buộc, cho phép linh hoạt hơn trong việc tạo người dùng.
